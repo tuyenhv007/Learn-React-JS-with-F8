@@ -1,0 +1,9 @@
+import React from "react";
+
+class Car extends React.Component {
+    render () {
+        return <h1>I'm a ginetic container!</h1>;
+    }
+}
+
+export default Car;
