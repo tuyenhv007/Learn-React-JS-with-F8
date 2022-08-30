@@ -1,22 +1,19 @@
-import { useRef } from "react"
-import Video from "./Video"
+import Heading from "./components/Heading"
+import Paragraph from "./components/Paragraph"
+import GlobalStyle from "./components/GlobalStyle"
 
 function App() {
-  const videoRef = useRef()
-
-  const handlePlay = () => {
-    videoRef.current.play()
-  }
-  const handlePause = () => {
-    videoRef.current.pause()
-  }
-
   return (
-    <div style={{padding: 80}}>
-      <Video ref={videoRef}/>
-      <button onClick={handlePlay}>Play</button>
-      <button onClick={handlePause}>Pause</button>
+    <GlobalStyle>
+      <div style={{padding: '0 32px'}}>
+      <Heading />
+      <Paragraph />
     </div>
+    <div className="d-flex">
+      <div>Item ABC</div>
+      <div>Item DEF</div>
+    </div>
+    </GlobalStyle>
   )
 }
 
